@@ -9,17 +9,15 @@ pub struct Transaction {
     pub max_priority_fee_per_gas: u8,
     pub data: String,
     pub max_fee_per_gas: u8,
-    pub chain:Network,
+    pub chain: Network,
 }
 
 #[derive(Debug)]
-pub enum  Network {
+pub enum Network {
     Base,
     Ethereum,
     Lisk,
-
 }
-
 
 impl Transaction {
     //..... Creates a new transaction "contructor".....//
@@ -31,7 +29,7 @@ impl Transaction {
         max_priority_fee_per_gas: u8,
         data: String,
         max_fee_per_gas: u8,
-        chain:Network,
+        chain: Network,
     ) -> Self {
         Self {
             from,
